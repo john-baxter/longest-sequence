@@ -71,3 +71,32 @@ RETURN return_string
 |zabczzabcdz|abcd|
 |yabcyyabcdy|abcd|
 |||
+
+<hr>
+
+# Notes
+```
+origin_string\
+"zabczzabcdz"
+
+index_difference_list\
+[23, 1, 1, 21, 0, 23, 1, 1, 1, 20]
+
+list_of_ones\
+[1, 1, 1]
+```
+
+## input output for index_difference
+
+|input|output|
+|---|---|
+|""|[]|
+|a|[]|
+|ab|[1]|
+|abz|[1, 22]|
+|zab|[23, 1]|
+|abc|[1, 1]|
+|||
+|zabczzabcdz|[23, 1, 1, 21, 0, 23, 1, 1, 1, 20]|
+|yabcyyabcdy|[22, 1, 1, 20, 22, 1, 1, 1, 19]|
+|||
