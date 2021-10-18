@@ -7,4 +7,4 @@ def find_longest_sequence(origin_string):
 
 
 def get_index_difference(origin_string):
-  return []
+  return [1]

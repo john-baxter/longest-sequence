@@ -41,9 +41,14 @@ class LongestSequenceTest(unittest.TestCase):
 class GetIndexDifferenceTest(unittest.TestCase):
   def test_index_difference_return(self):
       test_origin_string = ""
-      expected_result = []
       actual_result = longest_sequence.get_index_difference(test_origin_string)
       self.assertIsInstance(actual_result, list)
+  
+  def test_index_difference_return_1_if_given_ab(self):
+    test_origin_string = "ab"
+    expected_result = [1]
+    actual_result = longest_sequence.get_index_difference(test_origin_string)
+    self.assertEqual(actual_result, expected_result)
 
 
 
