@@ -56,7 +56,11 @@ class GetIndexDifferenceTest(unittest.TestCase):
     actual_result = longest_sequence.get_index_difference(test_origin_string)
     self.assertEqual(actual_result, expected_result)
 
-  
+  def test_index_difference_returns_23_1_if_given_zab(self):
+    test_origin_string = "zab"
+    expected_result = [23, 1]
+    actual_result = longest_sequence.get_index_difference(test_origin_string)
+    self.assertEqual(actual_result, expected_result)
 
 
 
