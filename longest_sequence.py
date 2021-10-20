@@ -7,7 +7,6 @@ def find_longest_sequence(origin_string):
   
   return origin_string
 
-
 def get_index_difference(origin_string):
   """
     FOR LOOP
@@ -26,7 +25,7 @@ def get_index_difference(origin_string):
   index_difference_list = []
   for i in range(len(origin_string) - 1):
     index_difference_list.append(
-      ALPHABET.index(origin_string[i+1]) - 
+      ALPHABET.index(origin_string[i + 1]) -
       ALPHABET.index(origin_string[i])
     )
 
