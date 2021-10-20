@@ -32,4 +32,8 @@ def get_index_difference(origin_string):
   return index_difference_list
 
 def get_index_of_ones(index_difference_list):
-  return index_difference_list.index(1)
+  index_diff_as_string = "".join(str(i) for i in index_difference_list)
+  if "11" in index_diff_as_string:
+    return index_diff_as_string.index("11")
+  else:
+    return index_difference_list.index(1)
