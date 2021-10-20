@@ -73,7 +73,11 @@ class GetIndexDifferenceTest(unittest.TestCase):
     self.assertEqual(actual_result_one, expected_result_one)
     
 
-
+class GetIndexOfOnesSequenceTest(unittest.TestCase):
+  def test_get_index_of_ones_returns_list(self):
+    test_index_difference_list = []
+    actual_result = longest_sequence.get_index_of_ones(test_index_difference_list)
+    self.assertIsInstance(actual_result, list)
 
 
 

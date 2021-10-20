@@ -30,3 +30,6 @@ def get_index_difference(origin_string):
     )
 
   return index_difference_list
+
+def get_index_of_ones(index_difference_list):
+  return []
