@@ -33,9 +33,11 @@ def get_index_difference(origin_string):
 
 def get_index_of_ones(index_difference_list):
   index_diff_as_string = "".join(str(i) for i in index_difference_list)
-  if "111" in index_diff_as_string:
-    return index_diff_as_string.index("111")  
-  elif "11" in index_diff_as_string:
-    return index_diff_as_string.index("11")
-  else:
-    return index_difference_list.index(1)
+  big_string_of_ones = "".join('1' for i in index_difference_list)
+
+  while len(big_string_of_ones) > 0:
+    if big_string_of_ones in index_diff_as_string:
+      return index_diff_as_string.index(big_string_of_ones)  
+    else:
+      big_string_of_ones = big_string_of_ones[:-1]
+      
