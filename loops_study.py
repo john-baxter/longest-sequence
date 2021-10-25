@@ -24,4 +24,10 @@ Like a list; but imutable
 (first_thing, second_thing)
 (only_thing,) =/= (thing_in_brackets)
 
-
+my_big_list = [
+    element_0,
+    element_1,
+    element_2,
+    element_3
+    
+]
