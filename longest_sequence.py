@@ -38,6 +38,6 @@ def get_index_of_ones(index_difference_list):
   while len(big_string_of_ones) > 0:
     if big_string_of_ones in index_diff_as_string:
       index_of_ones = index_diff_as_string.index(big_string_of_ones)
-      return (index_of_ones, 1)
+      return (index_of_ones, len(big_string_of_ones))
     else:
       big_string_of_ones = big_string_of_ones[:-1]
