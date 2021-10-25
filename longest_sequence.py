@@ -1,10 +1,12 @@
 ALPHABET = "abcdefghijklmnopqrstuvwxyz"
 
 def find_longest_sequence(origin_string):
-  disallowed_letters = "z"
-  for character in disallowed_letters:
-    origin_string = origin_string.replace(character, "")
+  # disallowed_letters = "z"
+  # for character in disallowed_letters:
+  #   origin_string = origin_string.replace(character, "")
   
+  index_difference_list = get_index_difference(origin_string)
+
   return origin_string
 
 def get_index_difference(origin_string):
