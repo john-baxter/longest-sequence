@@ -82,25 +82,25 @@ class GetIndexOfOnesSequenceTest(unittest.TestCase):
     test_index_difference_list = [0, 1]
     expected_result = 1
     actual_result = longest_sequence.get_index_of_ones(test_index_difference_list)
-    self.assertEqual(actual_result, expected_result)
+    self.assertEqual(actual_result[0], expected_result)
 
   def test_get_index_of_ones_returns_2_for_0_0_1(self):
     test_index_difference_list = [0, 0, 1]
     expected_result = 2
     actual_result = longest_sequence.get_index_of_ones(test_index_difference_list)
-    self.assertEqual(actual_result, expected_result)
+    self.assertEqual(actual_result[0], expected_result)
 
   def test_get_index_of_ones_returns_3_for_0_1_0_1_1(self):
     test_index_difference_list = [0, 1, 0, 1, 1]
     expected_result = 3
     actual_result = longest_sequence.get_index_of_ones(test_index_difference_list)
-    self.assertEqual(actual_result, expected_result)
+    self.assertEqual(actual_result[0], expected_result)
 
   def test_get_index_of_ones_returns_4_for_0_1_1_0_1_1_1(self):
     test_index_difference_list = [0, 1, 1, 0, 1, 1, 1]
     expected_result = 4
     actual_result = longest_sequence.get_index_of_ones(test_index_difference_list)
-    self.assertEqual(actual_result, expected_result)
+    self.assertEqual(actual_result[0], expected_result)
         
 
 

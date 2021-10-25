@@ -17,3 +17,11 @@ print("The longest sequence of 0's is " + str(prev))
 print("index start at: " + str(indexend - prev))
 print("index ends at: " + str(indexend - 1)
 
+"""
+Tuple:
+Like a list; but imutable
+
+(first_thing, second_thing)
+(only_thing,) =/= (thing_in_brackets)
+
+
