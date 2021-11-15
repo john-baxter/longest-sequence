@@ -53,35 +53,30 @@ class LongestSequenceTest(unittest.TestCase):
       self.assertEqual(manager.mock_calls, expected_mock_call)
       mock_call_get_index_difference.assert_called_once()
 
-  @patch('longest_sequence.get_index_of_ones')  
-  @patch('longest_sequence.get_index_difference')
-  # @patch('longest_sequence.get_index_difference', return_value = [1])
-  def test_longest_sequence_calls_get_index_difference_returns_a_when_input_is_a(
+  @patch('longest_sequence.get_index_of_ones', side_effect = [(1, 0)])  
+  @patch('longest_sequence.get_index_difference', return_value = [1])
+  def test_longest_sequence_calls_get_index_difference_returns_a_when_input_is_ab(
     self, 
     mock_call_get_index_difference,
     mock_call_get_index_of_ones
     ):
-      manager = mock.Mock()
-      # print(manager)
-      manager.attach_mock(mock_call_get_index_of_ones, 'mock_call_get_index_of_ones')
-      # print(manager)
-      manager.attach_mock(mock_call_get_index_difference, 'mock_call_get_index_difference')
-      # print(manager)
+    
+      mock_call_get_index_of_ones.return_value.in_place.return_value = (0, 1)
       
-      test_origin_string = "a"
+      manager = mock.Mock()
+      manager.attach_mock(mock_call_get_index_of_ones, 'mock_call_get_index_of_ones')
+      manager.attach_mock(mock_call_get_index_difference, 'mock_call_get_index_difference')
+      
+      test_origin_string = "ab"
       test_index_difference_list = [1]
       longest_sequence.find_longest_sequence(test_origin_string)
-      expected_mock_call = [
+      expected_mock_calls = [
         mock.call.mock_call_get_index_difference(test_origin_string),
         mock.call.mock_call_get_index_of_ones(test_index_difference_list),
         ]
       
-      print(mock.call.mock_call_get_index_difference(test_origin_string))
-      # print(mock.call.mock_call_get_index_of_ones(test_index_difference_list))
-      
-
-      self.assertEqual(manager.mock_calls[1], expected_mock_call[1])
-      # mock_call_get_index_of_ones.assert_called_once()
+      self.assertEqual(manager.mock_calls[1], expected_mock_calls[1])
+      mock_call_get_index_of_ones.assert_called_once()
 
 
 class GetIndexDifferenceTest(unittest.TestCase):
